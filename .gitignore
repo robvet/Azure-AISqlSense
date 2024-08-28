@@ -1,0 +1,26 @@
+.amlignore
+.zip
+.chroma/
+.ipynb_checkpoints/
+.ipynb_aml_checkpoints/ 
+__pycache__/
+common/__pycache__/
+.streamlit/
+*.amltmp 
+*.amltemp
+data/
+/NL2SQL/ExtraStuff/
+extrastuff/
+credentials.env
+/Demo/app/secrets/credentials.env
+.azure/
+.vscode/
+infra/target/
+**/__pycache__/
+/NL2SQL/evenv/
+/src-with-classes/
+NL2SQL-Demos.code-workspace
+NL2SQL-Demos.code-workspace
+
+# Add the specific path to exclude the credentials.env file
+Accelerator/credentials.env
