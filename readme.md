@@ -26,6 +26,13 @@ We use the SqlAgent feature from the Langchain framework which is considered one
 3. Explore Source Code for connecting to Microsoft Fabric:
    - Navigate to the `Fabric folder` for source code that will go against Microsoft Fabric as a data source.
 
+### What's Coming: 
+
+1. Security, security, security (adding identity/security)
+2. Python version that support classes.
+3. A version implemented with LLama Index.
+
+
 ### Acknowledgments
 
 Big thanks to `Pablo Marin` from Microsoft! We utilized parts of his work from the [GPT-Azure-Search-Engine](https://github.com/pablomarin/GPT-Azure-Search-Engine) repository. His repo offers a comprehensive set of examples for leveraging data and OpenAI—definitely worth checking out.
