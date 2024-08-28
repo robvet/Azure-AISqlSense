@@ -2,7 +2,7 @@
 
 ### What is it?
 
-An agent for generating Sql Queries from Natrual Language. You configure that service to go against your database. You expose a chat app to your users. They make a request to see specific data. The service (1) transforms that request to a SQL Query and (2) executes it against the database. 
+An agent for generating Sql Queries from Natural Language. You configure that service to go against your database. You expose a chat app to your users. They make a request to see specific data. The service (1) transforms that request to a SQL Query and (2) executes it against the database. 
 
 We use the SqlAgent feature from the Langchain framework which is considered one of the best agents for these operations. 
 
@@ -23,6 +23,8 @@ We use the SqlAgent feature from the Langchain framework which is considered one
    - Run the code using Jupyter Notebook in either VS Code or PyCharm.
 2. Explore the Source Code:
    - Navigate to the `src folder` for a full version of the source code, which can be run as an API.
+3. Explore Source Code for connecting to Microsoft Fabric:
+   - Navigate to the `Fabric folder` for source code that will go against Microsoft Fabric as a data source.
 
 ### Acknowledgments
 
