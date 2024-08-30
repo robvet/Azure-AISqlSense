@@ -25,7 +25,6 @@ filelock==3.13.1
 filetype==1.2.0
 Flask==3.0.2
 langchain==0.2.14  # Ensure the correct version of Langchain
-langchain-openai==0.0.1  # Ensure the correct version of Langchain OpenAI
 langchain-community==0.2.7  # Ensure the correct version of Langchain Community
 langchain-core==0.2.32  # Ensure the correct version of Langchain Core
 langchain-openai==0.1.16
