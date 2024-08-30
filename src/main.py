@@ -18,10 +18,6 @@ logger = logging.getLogger(__name__)
 # Cardinal rule: Keep the endpoint logic separate from the FastAPI application instance.
 # Use this class only to define the FastAPI application instance and the endpoints and receive requests.
 
-# Creates instance of FastAPI class and assigns it to the variable app.
-# App is the entry point for this app. It handles all incoming requests
-# and routes them to the appropriate endpoint.
-app = FastAPI()
 
 # Set up a local model class entitled UserPrompt using Pydantic, a library 
 # that helps ensure the data is correct and follows the specified format.
@@ -34,6 +30,16 @@ app = FastAPI()
 class UserPrompt(BaseModel):
     # The model has a single attribute 'prompt' which is a string
     prompt: str
+
+logger.info("**** Starting FastAPI application")
+
+# Creates instance of FastAPI class and assigns it to the variable app.
+# App is the entry point for this app. It handles all incoming requests
+# and routes them to the appropriate endpoint.
+app = FastAPI()
+
+# Log endpoint registration
+logger.info("**** Registering /generate-sql/ endpoint")
 
 
 # # Define a POST endpoint at the path "/generate-sql/"
@@ -48,9 +54,7 @@ def generate_sql(user_prompt: UserPrompt):
     Returns:
     - dict: A JSON response containing the generated SQL query.
     """
-    logger.info("Entered generate_sql endpoint with user_prompt: %s", user_prompt)
-
-
+    logger.info("**** Entered generate_sql endpoint with user_prompt: %s", user_prompt)
 
     try:
         # Call the generate_sql_query function with the prompt from the request body
@@ -65,15 +69,15 @@ def generate_sql(user_prompt: UserPrompt):
     except Exception as e:
         logger.error("Exception in generate_sql: %s", str(e))
         # For all other exceptions, return a 500 Internal Server Error
-    #     raise HTTPException(status_code=500, detail=str(e))
+        raise HTTPException(status_code=500, detail=str(e))
 
-    @app.on_event("shutdown")
-    async def shutdown_event():
-        print("Application shutdown")
+@app.on_event("shutdown")
+async def shutdown_event():
+    print("Application shutdown")
 
-    @app.on_event("startup")
-    async def startup_event():
-        print("Application startup")
+@app.on_event("startup")
+async def startup_event():
+    print("**** Starting the API")
 
     # try:
     #     # Call the generate_sql_query function with the prompt from the request body
