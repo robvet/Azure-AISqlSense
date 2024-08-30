@@ -33,5 +33,5 @@ langsmith==0.1.85
 pandas==1.5.3
 python-dotenv==1.0.0
 sqlalchemy==2.0.0
-tiktoken==0.3.0
+tiktoken=0.7,<1  # Updated to a compatible version
 uvicorn==0.30.6
